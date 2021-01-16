@@ -1,0 +1,66 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Maths",
+    "slug": "maths"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "English",
+    "slug": "english"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Cybercrime",
+    "slug": "cybercrime"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 4,
+  "fields": {
+    "title": "Digital Forensics",
+    "slug": "digital-forensics"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 5,
+  "fields": {
+    "title": "Disaster Recovery",
+    "slug": "disaster-recovery"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 6,
+  "fields": {
+    "title": "Incident Response",
+    "slug": "incident-response"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 7,
+  "fields": {
+    "title": "Web Development",
+    "slug": "web-development"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 8,
+  "fields": {
+    "title": "Web Hacking",
+    "slug": "web-hacking"
+  }
+}
+]

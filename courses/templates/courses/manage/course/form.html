@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    {% if object %}
+        Edit course "{{ object.title.title }}"
+    {% else %}
+        Create a new course
+    {% endif %}
+{% endblock %}
+
+{% block html_body_content %}
+{% include 'navbar.html' %}
+<section class="account-page-section">
+    <div class="account-left-section">
+        <h4 class="font-weight-bold">
+            {% if object %}
+                Edit '{{ object.title.title }}'
+            {% else %}
+                Create a new course
+            {% endif %}
+        </h4>
+        <div class="module">
+            <h5 class="mb-3">Course info</h5>
+            <hr>
+            <form action="" method="post">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <p><button class="btn btn-primary font-weight-bold" type="submit">Save course</button></p>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

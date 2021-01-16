@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    Edit "{{ course.title }}"
+{% endblock %}
+
+{% block html_body_content %}
+{% include 'navbar.html' %}
+<section class="account-page-section">
+    <div id="module-edit-form" class="account-left-section">
+        <h4 class="font-weight-bold">Edit "{{ course.title.title }}" Modules</h4>
+        <h5 class="mb-4">Course modules</h5>
+        <hr>
+        <form action="" method="post">
+            {{ formset.as_p }}
+            {{ formset.management_form }}
+            {% csrf_token %}
+            <small class="text-muted d-block">Click <strong>save</strong> if you want to add more modules</small>
+            <button type="submit" class="btn mt-2 btn-primary">Save modules</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

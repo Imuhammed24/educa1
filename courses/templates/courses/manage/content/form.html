@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    {% if object %}
+        Edit content "{{ object.title }}"
+    {% else %}
+        Add a new content
+    {% endif %}
+{% endblock %}
+
+{% block html_body_content %}
+<section>
+    <div class="delete-confirmation ml-auto mr-auto">
+        <h3><strong><center>
+            {% if object %}
+                Edit: "{{ object.title }}"
+            {% else %}
+                Add a new content
+            {% endif %}
+        </center></strong></h3>
+        <div class="module">
+            <center><h5>Course info</h5></center>
+            <hr>
+
+            <form id="content-update-form" action="" method="post" enctype="multipart/form-data">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <p><button class="btn btn-primary" type="submit">Save content</button></p>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% load static %}
+<div id="registration-modal" class="modal fade-in">
+    <div id="registration-modal-content">
+
+        <header class="reg-modal-header">
+            <span onclick="document.getElementById('registration-modal').style.display='none'"
+                  class="w3-button reg-modal-close-btn w3-large w3-display-topright">&times;</span>
+            <h4 class="font-weight-bold">SIGN-UP NOW</h4>
+        </header>
+
+        <SECTION>
+            <form id="reg-form" action="{% url 'account:register' %}" method="post">
+                {% csrf_token %}
+                {{ signup_form }}
+                <button type="submit" class="d-block bg-success p-3 mt-3">Sign-up</button>
+            </form>
+        </SECTION>
+
+    </div>
+</div>

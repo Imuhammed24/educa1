@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Delete course{% endblock %}
+
+{% block html_body_content %}
+<section>
+    <div class="delete-confirmation ml-auto mr-auto w-25">
+        <h4><strong>Delete course</strong> "{{ object.title.title }}"</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <button type="submit" class="btn-danger text-white btn-outline-danger p-2">Confirm</button>
+        </form>
+        <button onclick="window.history.back();" class="btn-success text-white btn-outline-success p-2">No, Back</button>
+    </div>
+</section>
+{% endblock %}
